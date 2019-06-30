@@ -1,0 +1,287 @@
+<!DOCTYPE html5>
+<html>
+  <head><title>IOT CONTROLLED ROBOT CAR </title>
+<style>
+	.left{
+ 
+  width:15%;
+  background-color:red;
+  display:inline-block; 
+  grid-template-columns: 15%;
+  position: fixed;
+ }
+
+
+.heading{
+ padding:12px 30px;
+  font-size: 30px;
+  background: LightGray;
+  border:1px solid blue;
+  
+ 
+}
+.menu{
+  padding:12px 30px;
+  font-size: 20px;
+  background: LightGray;
+  border:1px solid blue;
+}
+
+.right{
+  width:84.5%;
+  display:inline-block; 
+  vertical-align:top;
+  background-color:red;
+  float: right;
+}
+.blk{
+  background: pink;
+  border:1px solid blue;
+  width:100%;
+}
+.top{
+ padding:12px 30px;
+  font-size: 30px;
+  background: orange;
+ }
+p {
+     padding:10px 25px;
+    margin-left: 20px;
+    font-size: 18px;
+   
+  
+}
+ul {
+   margin-left: 60px;
+   padding:10px 25px;
+   display: block;
+   font-size: 18px;
+}
+img{
+  height:350px;
+  width:700px;
+  padding:10px 300px;
+ 
+}
+a{
+  text-decoration: none;
+}
+
+
+</style>
+</head>
+ <body>
+  <div class="left">
+      <div class="heading">
+        IOT RobotCar
+       </div >
+     <div class="menu">
+        <a href="#A">Introduction</a>
+      </div>
+    <div class="menu">
+        <a href="#B">IoT Controlled Car</a>
+      </div><div class="menu">
+    <a href="#C">Resources</a>
+      </div><div class="menu">
+        <a href="#D">MQTT Protocol</a>
+      </div><div class="menu">
+        <a href="#E">Arduino Programming</a>
+      </div><div class="menu">
+        <a href="#F">ESP8266 12E MCU</a>
+      </div><div class="menu">
+    <a href="#G">L298N Dual MC</a>
+      </div><div class="menu">
+        <a href="#H">Project Code</a>
+      </div><div class="menu">
+        <a href="#I">References</a>
+      </div>
+  </div>
+  <div class="right">
+    <div class="blk" id="A">
+      <div class="top" >
+     Introduction
+      </div>
+     <p> The Internet of things (IoT) is the network of physical devices, vehicles, home 
+appliances, and other items embedded with electronics, software, sensors,
+ actuators, and network connectivity which enable these objects to connect and 
+exchange data. </p>
+      
+      <img src="https://camo.githubusercontent.com/c03706fc6fdbd7865ad8ade1665b397c58d0ee89/687474703a2f2f74696e79696d672e696f2f692f3032795a6f71672e6a7067">
+     
+    </div>
+    
+    <div class="blk" id="B" >
+      <div class="top" >
+     IoT Controlled Car
+      </div>
+     <p> It is a application of Internet of Things in which controlling of the car is done automatically by using various Internet based control techniques. In this project we are controlling car using Web Page Dashboard and Google Assistant.  </p>
+      <p>To implement this  we need:-</p>
+      <ul>
+           <li>A Internet Connected MCU connected to Appliances</li>
+      <li>A Server</li>
+      <li>A Internet Access Device to interact with with Server and a  Recent Android Device.</li>
+        
+      </ul>
+     
+    </div>
+    
+    <div class="blk" id="C" >
+      <div class="top" >
+     Resources
+      </div>
+     <p>Hardwares</p><ul>
+<li>ESP8266 12E Chip (A WiFi MCU)</li>
+<li>L298N Dual H Bridged Motor Controller</li>
+<li>Mini Bread Board</li> 
+<li>9V DC Battery</li>
+<li>Jumper Wires</li>
+<li>3.5V Battery</li>
+<li>A Toy Car Chassis with 2 motors</li>
+<li> Four LEDs</li>
+</ul>
+<p>Softwares</p>
+   <ul>  <li>Arduino IDE (To Code MCU)</li>
+     <li>Chatbot  Developer (Chatfuel)</li>
+     <li>MQTT protocol based Server (io.reteiot.com  and io.adafruit.com)</li>
+    <li>A Facebook Page (IOT)</li>
+     </ul>
+
+
+<p>Network</p>
+      <ul><li>Wifi Connection</li></ul>
+     
+    </div>
+    
+    <div class="blk" id="D" >
+      <div class="top" >
+     MQTT Protocol
+      </div>
+     <p><b>Introduction</b></p>
+<p>MQTT (Message Queue Telemetry Transport) is a publish /subscribe messaging protocol designed for lightweight M2M communications. It was originally developed by IBM and is now an open standard. It is an application layer protocol.</p>
+
+ <p><b>Architecture</b></p><ul>
+<li>MQTT has a client/server model, where every sensor is a client and connects to a server, known as a broker, over TCP.</li>
+<li>MQTT is message oriented. Every message is a discrete chunk of data, opaque to the broker.</li>
+<li>Every message is published to an address, known as a topic. Clients may subscribe to multiple topics. Every client subscribed to a topic receives every message published to the topic</li>
+    </ul> 
+    </div>
+    
+    <div class="blk" id="E">
+      <div class="top" >
+     Arduino Programming
+      </div>
+    <p><b>Introduction</b></p>
+<p>Arduino is an open-source platform used for building electronics projects. 
+Arduino consists of both a physical programmable circuit board (often referred 
+to as a microcontroller) and a piece of software, or IDE  (Integrated 
+Development Environment) that runs on your computer, used to write and 
+upload computer code to the physical board.</p>
+
+
+<p>Arduino library used in project:-</p>
+<ul>
+<li>ESP8266WiFi.h</li>
+<li>Adafruit_MQTT.h</li>
+<li>Adafruit_MQTT_Client.h</li>
+      </ul>
+    </div>
+    
+    <div class="blk" id="F">
+      <div class="top" >
+     ESP8266 12E MCU
+      </div>
+    <p><b>Introduction:-</b></p>
+	<p>The ESP8266 is a low-cost Wi-Fi chip with full TCP/IP stack and MCU (microcontroller unit) 
+capability produced by Shanghai-based Chinese manufacturer, Espressif Systems.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ75OSdsH9l-Bgj2jhEgI_8evEaTh9khRdIpG--dKY6cwM40OAS">
+     
+    </div>
+    
+    <div class="blk" id="G">
+      <div class="top" >
+     L298N Dual MC
+      </div>
+     <p><b>Introduction:-</b></p>
+<p>It is used to control the motors of the car as well as like Relay for 3.3V to 9V and above.</p>
+
+
+<p><b>Pins:</b></p><ul>
+    <li>Out 1: Motor A lead out</li>
+    <li>Out 2: Motor A lead out</li>
+    <li>Out 3: Motor B lead out</li>
+    <li>Out 4: Mo (Can actually be from 5v-35v, just marked as 12v)</li>
+    <li>GND: Ground</li>
+    <li>5v: 5v input (unnecessary if your power source is 7v-35v, if the power source is 7v-35v then it can act as a 5v out)</li>
+    <li>EnA: Enables PWM signal for Motor A (Please see the "Arduino Sketch Considerations" section)</li>
+    <li>In1: Enable Motor A</li>
+    <li>In2: Enable Motor A</li>
+    <li>In3: Enable Motor B</li>
+    <li>In4: Enable Motor B</li>
+    <li>EnB: Enables PWM signal for Motor B (Please see the "Arduino Sketch Considerations" section)</li></ul>
+
+       <p><b>Specifications:</b></p><ul>
+    <li>Double H bridge Drive Chip: L298N</li>
+    <li>Logical voltage: 5V Drive voltage: 5V-35V</li>
+    <li>Logical current: 0-36mA Drive current: 2A (MAX single bridge)</li>
+    <li>Max power: 25W</li>
+    <li>Dimensions: 43 x 43 x 26mm</li>
+    <li>Weight: 26g</li>
+       </ul>
+<p><b>Working:-</b></p><ul>
+        <li>We have used two motors to make the car multidirectional and a roller in the front to just for balance the load and rolling smoothly.</li>
+        <li>If we have used only one motor then the car would move just forward and backward or left and right.</li>
+        <li>If both wheels will rotate forward then car will move forward and if both move in backward direction then car will move in backward.</li>
+        <li>If the left wheel will be in stop position and right wheel will moving forward the car will move in left direction.</li> 
+        <li>If the right wheel will be in stop position and left wheel will moving forward the car will move in right direction.</li></ul> 
+
+<p><b>Dual H bridge:-</b></p>
+<p>An H bridge is an electronic circuit that enables a voltage to be applied across a load in opposite direction. These circuits are often used in robotics and other applications to allow DC motors to run forwards or backwards.</p>
+      <img src="https://www.researchgate.net/profile/Sachin_Angadi/publication/261235657/figure/fig3/AS:598144702226432@1519620218829/Schematic-of-Dual-H-bridge-inverter_Q320.jpg">
+
+     
+    </div>
+    
+    <div class="blk" id="H">
+      <div class="top" >
+     Project Code
+      </div>
+     <p> Here is the link of<a href="https://github.com/nagraj0308/majorproject" target="_blank" >  Project Code</a></p>
+   
+     
+    </div>
+    
+    
+    
+    <div class="blk" id="I">
+      <div class="top" >
+     References
+      </div>
+     <ul><b>
+           <li><a href="https://www.arduino.cc/reference/en/" target="_blank"> https://www.arduino.cc/reference/en/</a></li>
+
+    <li><a href="https://en.wikipedia.org/wiki/Internet_of_things" target="_blank"> https://en.wikipedia.org/wiki/Internet_of_things</a></li>
+
+    <li><a href="http://www.electronicshub.org/use-5v-relay-arduino/" target="_blank"> http://www.electronicshub.org/use-5v-relay-arduino/</a></li>
+
+    <li><a href="https://www.ibm.com/developerworks/cloud/library/cl-mqtt-bluemix-iot-node-red-app/index.html" target="_blank"> https://www.ibm.com/developerworks/cloud/library/cl-mqtt-bluemix-iot-node-red-app/index.html</a></li>
+
+    <li><a href="http://www.kloppenborg.net/images/blog/esp8266/esp8266-esp12e-specs.pdf" target="_blank"> http://www.kloppenborg.net/images/blog/esp8266/esp8266-esp12e-specs.pdf</a></li>
+
+    <li><a href="http://www.electronics-tutorials.ws/blog/relay-switch-circuit.html" target="_blank">http://www.electronics-tutorials.ws/blog/relay-switch-circuit.html</a></li>
+       
+       </b></ul>
+      <p><b>Team Members!!</b></p>
+      <ul>
+        <li><a href="https://www.facebook.com/nagendra0308" target="_blank">Nagendra Chaudhary</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100007303066430" target="_blank">K. Akhil</a></li>
+        <li><a href="https://www.facebook.com/sachin.hembrom.33" target="_blank">Sachin Hembrom</a></li>
+      </ul>
+      
+     
+    </div>
+    
+    
+  </div>
+ </body>
+
+</html>
